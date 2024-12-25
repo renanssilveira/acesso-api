@@ -13,7 +13,16 @@ import org.springframework.stereotype.Component;
 @Component
 public class UsuarioConverter {
 
-    public Usuario toDomain(UsuarioDto usuarioDto){
-        return new Usuario(usuarioDto.getId(), usuarioDto.getEmail(), usuarioDto.getSenha(), usuarioDto.getAdministrator());
-    }
+  public Usuario toDomain(UsuarioDto usuarioDto) {
+    return new Usuario(
+        usuarioDto.getId(),
+        usuarioDto.getEmail(),
+        usuarioDto.getSenha(),
+        usuarioDto.getAdministrator());
+  }
+
+  public UsuarioDto toDTO(Usuario usuario) {
+    return new UsuarioDto(
+        usuario.getId(), null, usuario.getEmail(), usuario.getSenha(), usuario.getAdministrator());
+  }
 }
