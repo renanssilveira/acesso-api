@@ -4,12 +4,12 @@ import com.devrenan.acesso_api.adapter.converters.UsuarioConverter;
 import com.devrenan.acesso_api.adapter.dtos.UsuarioDto;
 import com.devrenan.acesso_api.core.ports.UsuarioServicePort;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/usuarios")
-
 public class UsuarioController {
 
   private final UsuarioServicePort usuarioServicePort;
@@ -19,6 +19,7 @@ public class UsuarioController {
         this.usuarioServicePort = usuarioServicePort;
         this.usuarioConverter = usuarioConverter;
     }
+
 
     @PostMapping
   @ResponseStatus(HttpStatus.CREATED)
