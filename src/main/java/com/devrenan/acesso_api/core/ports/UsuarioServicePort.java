@@ -1,4 +1,4 @@
-package com.devrenan.acesso_api.core.domain.ports;
+package com.devrenan.acesso_api.core.ports;
 
 import com.devrenan.acesso_api.core.domain.Usuario;
 import org.springframework.stereotype.Service;
