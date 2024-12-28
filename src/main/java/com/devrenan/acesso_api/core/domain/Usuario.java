@@ -2,21 +2,23 @@ package com.devrenan.acesso_api.core.domain;
 
 
 public class Usuario {
-    private Long id;
-    private String email;
-    private String senha;
-    private Boolean administrator;
-    private Long idPessoa;
+  private Long id;
+  private String email;
+  private String senha;
+  private Boolean administrator;
+  private Pessoa pessoa;
 
 
-    public Usuario(Long id, String email, String senha, Boolean administrator) {
+    public Usuario(Long id, String email, String senha, Boolean administrator, Pessoa pessoa) {
         this.id = id;
         this.email = email;
         this.senha = senha;
         this.administrator = administrator;
+        this.pessoa = pessoa;
     }
 
     public Usuario() {
+
     }
 
     public Long getId() {
@@ -49,5 +51,13 @@ public class Usuario {
 
     public void setAdministrator(Boolean administrator) {
         this.administrator = administrator;
+    }
+
+    public Pessoa getPessoa() {
+        return pessoa;
+    }
+
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
     }
 }

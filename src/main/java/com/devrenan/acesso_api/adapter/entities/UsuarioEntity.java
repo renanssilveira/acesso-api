@@ -1,14 +1,13 @@
 package com.devrenan.acesso_api.adapter.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "tb_usuario")
 public class UsuarioEntity {
 
   @Id
@@ -17,6 +16,17 @@ public class UsuarioEntity {
   private String email;
   private String senha;
   private Boolean administrator;
+  @OneToOne
+  @JoinColumn(name = "id_pessoa")
+  private PessoaEntity pessoa;
+
+  public PessoaEntity getPessoa() {
+    return pessoa;
+  }
+
+  public void setPessoa(PessoaEntity pessoa) {
+    this.pessoa = pessoa;
+  }
 
   public Long getId() {
     return id;
