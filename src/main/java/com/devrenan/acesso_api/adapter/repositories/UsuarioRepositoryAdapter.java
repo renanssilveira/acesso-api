@@ -24,11 +24,12 @@ public class UsuarioRepositoryAdapter implements UsuarioRepositoryPort {
 
     @Override
   public Usuario create(Usuario usuario) {
-        PessoaEntity pessoaEntityMap = modelMapper.map(usuario.getPessoa(), PessoaEntity.class);
-        PessoaEntity pessoaEntity = pessoaRepository.save(pessoaEntityMap);
         UsuarioEntity usuarioEntity = modelMapper.map(usuario, UsuarioEntity.class);
-        usuarioEntity.setPessoa(pessoaEntity);
-        UsuarioEntity novoUsuarioEntity = usuarioRepository.save(usuarioEntity);
-        return modelMapper.map(novoUsuarioEntity, Usuario.class);
+        usuarioEntity.setPessoa(createPessoa(usuario));
+        return modelMapper.map(usuarioRepository.save(usuarioEntity), Usuario.class);
   }
+
+    private PessoaEntity createPessoa(Usuario usuario) {
+        return pessoaRepository.save(modelMapper.map(usuario.getPessoa(), PessoaEntity.class));
+    }
 }
