@@ -1,24 +1,25 @@
-package com.devrenan.acesso_api.core.domain;
+package com.devrenan.acesso_api.adapter.entities;
 
-public class Morador {
+import com.devrenan.acesso_api.core.domain.Pessoa;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Table(name = "tb_morador")
+public class MoradorEntity {
+
+  @Id
+  @GeneratedValue
   private Long id;
   private String cpf;
   private String endereco;
   private String celular;
-  private Pessoa pessoa;
-
-
-  public Morador(Long id, String cpf, String endereco, String celular, Pessoa pessoa) {
-    this.id = id;
-    this.cpf = cpf;
-    this.endereco = endereco;
-    this.celular = celular;
-    this.pessoa = pessoa;
-  }
-
-  public Morador() {
-
-  }
+  @OneToOne
+  @JoinColumn(name = "id_pessoa")
+  private PessoaEntity pessoa;
 
   public Long getId() {
     return id;
@@ -52,11 +53,11 @@ public class Morador {
     this.celular = celular;
   }
 
-  public Pessoa getPessoa() {
+  public PessoaEntity getPessoa() {
     return pessoa;
   }
 
-  public void setPessoa(Pessoa pessoa) {
+  public void setPessoa(PessoaEntity pessoa) {
     this.pessoa = pessoa;
   }
 }

@@ -4,17 +4,17 @@ import com.devrenan.acesso_api.core.domain.Pessoa;
 
 public class MoradorDto {
   private Long id;
+  private String nome;
   private String cpf;
   private String endereco;
   private String celular;
-  private Pessoa pessoa;
 
-  public MoradorDto(Long id, String cpf, String endereco, String celular, Pessoa pessoa) {
+  public MoradorDto(Long id, String cpf, String endereco, String celular, String nome) {
     this.id = id;
     this.cpf = cpf;
     this.endereco = endereco;
     this.celular = celular;
-    this.pessoa = pessoa;
+    this.nome = nome;
   }
 
   public MoradorDto() {}
@@ -51,11 +51,11 @@ public class MoradorDto {
     this.celular = celular;
   }
 
-  public Pessoa getPessoa() {
-    return pessoa;
+  public String getNome() {
+    return nome;
   }
 
-  public void setPessoa(Pessoa pessoa) {
-    this.pessoa = pessoa;
+  public void setNome(String nome) {
+    this.nome = nome;
   }
 }

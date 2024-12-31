@@ -11,14 +11,21 @@ import org.springframework.stereotype.Component;
 public class MoradorConverter {
 
   public Morador toDomain(MoradorDto moradorDto) {
-    return new Morador(moradorDto.getId(),
-            moradorDto.getCpf(),
-        moradorDto.getEndereco(), moradorDto.getCelular(),
-            new Pessoa(null, moradorDto.getPessoa()));
+    return new Morador(
+        moradorDto.getId(),
+        moradorDto.getCpf(),
+        moradorDto.getEndereco(),
+        moradorDto.getCelular(),
+        new Pessoa(null, moradorDto.getNome()));
   }
 
-  public UsuarioDto toDTO(Usuario usuario) {
-    return new UsuarioDto(
-        usuario.getId(), null, usuario.getEmail(), usuario.getSenha(), usuario.getAdministrator());
+  public MoradorDto toDTO(Morador morador) {
+    return new MoradorDto(
+            morador.getId(),
+            morador.getCpf(),
+         morador.getEndereco(),
+         morador.getCelular(),
+         morador.getPessoa().getNome());
   }
+
 }
