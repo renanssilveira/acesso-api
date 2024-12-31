@@ -1,23 +1,23 @@
-package com.devrenan.acesso_api.core.domain;
+package com.devrenan.acesso_api.adapter.dtos;
 
-public class Morador {
+import com.devrenan.acesso_api.core.domain.Pessoa;
+
+public class MoradorDto {
   private Long id;
   private String cpf;
   private String endereco;
   private String celular;
+  private Pessoa pessoa;
 
-
-  public Morador(Long id, String cpf, String endereco, String celular, String nome) {
+  public MoradorDto(Long id, String cpf, String endereco, String celular, Pessoa pessoa) {
     this.id = id;
     this.cpf = cpf;
     this.endereco = endereco;
     this.celular = celular;
-    this.nome = nome;
+    this.pessoa = pessoa;
   }
 
-  public Morador() {
-
-  }
+  public MoradorDto() {}
 
   public Long getId() {
     return id;
@@ -51,11 +51,11 @@ public class Morador {
     this.celular = celular;
   }
 
-  public String getNome() {
-    return nome;
+  public Pessoa getPessoa() {
+    return pessoa;
   }
 
-  public void setNome(String nome) {
-    this.nome = nome;
+  public void setPessoa(Pessoa pessoa) {
+    this.pessoa = pessoa;
   }
 }
