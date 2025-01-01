@@ -1,10 +1,8 @@
 package com.devrenan.acesso_api.adapter.converters;
 
 import com.devrenan.acesso_api.adapter.dtos.MoradorDto;
-import com.devrenan.acesso_api.adapter.dtos.UsuarioDto;
 import com.devrenan.acesso_api.core.domain.Morador;
 import com.devrenan.acesso_api.core.domain.Pessoa;
-import com.devrenan.acesso_api.core.domain.Usuario;
 import org.springframework.stereotype.Component;
 
 @Component

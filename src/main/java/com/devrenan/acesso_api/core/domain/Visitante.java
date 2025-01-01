@@ -2,13 +2,15 @@ package com.devrenan.acesso_api.core.domain;
 
 public class Visitante {
     private Long id;
+    private String nome;
     private String rg;
-    private Long idPessoa;
+    private Pessoa pessoa;
 
-    public Visitante(Long id, String rg, Long idPessoa) {
+    public Visitante(Long id, String nome, String rg, Pessoa pessoa) {
         this.id = id;
+        this.nome = nome;
         this.rg = rg;
-        this.idPessoa = idPessoa;
+        this.pessoa = pessoa;
     }
 
     public Visitante() {
@@ -22,6 +24,14 @@ public class Visitante {
         this.id = id;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
     public String getRg() {
         return rg;
     }
@@ -30,11 +40,11 @@ public class Visitante {
         this.rg = rg;
     }
 
-    public Long getIdPessoa() {
-        return idPessoa;
+    public Pessoa getPessoa() {
+        return pessoa;
     }
 
-    public void setIdPessoa(Long idPessoa) {
-        this.idPessoa = idPessoa;
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
     }
 }

@@ -1,6 +1,5 @@
 package com.devrenan.acesso_api.adapter.dtos;
 
-import com.devrenan.acesso_api.core.domain.Pessoa;
 
 public class MoradorDto {
   private Long id;

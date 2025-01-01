@@ -3,8 +3,6 @@ package com.devrenan.acesso_api.adapter.controllers;
 import com.devrenan.acesso_api.adapter.converters.UsuarioConverter;
 import com.devrenan.acesso_api.adapter.dtos.UsuarioDto;
 import com.devrenan.acesso_api.core.ports.UsuarioServicePort;
-
-import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 

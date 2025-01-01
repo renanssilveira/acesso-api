@@ -1,6 +1,5 @@
 package com.devrenan.acesso_api.adapter.entities;
 
-import com.devrenan.acesso_api.core.domain.Pessoa;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;

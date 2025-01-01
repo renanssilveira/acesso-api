@@ -1,10 +1,7 @@
 package com.devrenan.acesso_api.adapter.repositories;
 
 import com.devrenan.acesso_api.adapter.entities.MoradorEntity;
-import com.devrenan.acesso_api.adapter.entities.PessoaEntity;
 import com.devrenan.acesso_api.core.domain.Morador;
-import com.devrenan.acesso_api.core.domain.Pessoa;
-import com.devrenan.acesso_api.core.domain.Usuario;
 import com.devrenan.acesso_api.core.ports.MoradorRepositoryPort;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;

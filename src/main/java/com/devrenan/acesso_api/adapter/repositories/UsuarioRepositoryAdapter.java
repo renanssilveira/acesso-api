@@ -1,8 +1,6 @@
 package com.devrenan.acesso_api.adapter.repositories;
 
-import com.devrenan.acesso_api.adapter.entities.PessoaEntity;
 import com.devrenan.acesso_api.adapter.entities.UsuarioEntity;
-import com.devrenan.acesso_api.core.domain.Pessoa;
 import com.devrenan.acesso_api.core.domain.Usuario;
 import com.devrenan.acesso_api.core.ports.UsuarioRepositoryPort;
 import org.modelmapper.ModelMapper;

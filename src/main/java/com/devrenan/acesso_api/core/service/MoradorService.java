@@ -1,6 +1,5 @@
 package com.devrenan.acesso_api.core.service;
 
-import com.devrenan.acesso_api.adapter.repositories.MoradorRepositoryAdapter;
 import com.devrenan.acesso_api.core.domain.Morador;
 import com.devrenan.acesso_api.core.ports.MoradorRepositoryPort;
 import com.devrenan.acesso_api.core.ports.MoradorServicePort;

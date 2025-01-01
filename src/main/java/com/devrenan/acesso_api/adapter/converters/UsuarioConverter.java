@@ -3,9 +3,7 @@ package com.devrenan.acesso_api.adapter.converters;
 import com.devrenan.acesso_api.adapter.dtos.UsuarioDto;
 import com.devrenan.acesso_api.core.domain.Pessoa;
 import com.devrenan.acesso_api.core.domain.Usuario;
-
 import org.springframework.stereotype.Component;
-
 
 @Component
 public class UsuarioConverter {
