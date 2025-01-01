@@ -1,11 +1,9 @@
 package com.devrenan.acesso_api.infra;
 
-import com.devrenan.acesso_api.core.ports.MoradorRepositoryPort;
-import com.devrenan.acesso_api.core.ports.MoradorServicePort;
-import com.devrenan.acesso_api.core.ports.UsuarioRepositoryPort;
-import com.devrenan.acesso_api.core.ports.UsuarioServicePort;
+import com.devrenan.acesso_api.core.ports.*;
 import com.devrenan.acesso_api.core.service.MoradorService;
 import com.devrenan.acesso_api.core.service.UsuarioService;
+import com.devrenan.acesso_api.core.service.VisitanteService;
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -29,6 +27,11 @@ public class BeansConfig {
     @Bean
     public MoradorServicePort moradorServicePort(MoradorRepositoryPort moradorRepositoryPort){
         return new MoradorService(moradorRepositoryPort);
+    }
+
+    @Bean
+    public VisitanteServicePort visitanteServicePort(VisitanteRepositoryPort visitanteRepositoryPort){
+    return new VisitanteService(visitanteRepositoryPort);
     }
 
 }
